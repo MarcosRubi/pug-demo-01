@@ -1,0 +1,68 @@
+mixin cardBanner(clas,image,title)
+    div(class="col-sm-4 col-6 " + clas)
+        div(class="bb-img")
+            img(src=`images/${image}.jpg` class="img-fluid img-thumbnail")
+            h3=title
+mixin service(icon, title, text)
+    div(class="abt-grid")
+        div(class="row")
+            div(class="col-3")
+                div(class="abt-icon")
+                    span(class=icon)
+            div(class="col-9")
+                div(class="abt-txt")
+                    h4=title
+                    p=text
+mixin portfolio(id,img,title,text)
+    li(class="col-lg-4")
+                    div(Class="img-grid")
+                        div(class="portfolio-grid1")
+                            a(href=id)
+                                img(src="images/" + img  class="img-fluid")
+                        div(class="port-desc text-center")
+                            h6(class="main-title-w3pvt text-center")=title
+                            p=text
+
+mixin popup(id, img, text)
+    div(id=id class="popup-effect animate")
+                div(class="popup")
+                    img(src="images/"+ img alt="popup Image" class="img-fluid")
+                    p(class="editContent mt-4")=text
+                    a(href="#gallery" class="close") &times;
+
+mixin creativeIcon(icon,title,text)
+    div(class="row")
+        div(class="col-3")
+            div(class="abt-icon")
+                span(class=icon)
+        div(class="col-9")
+            div(class="abt-txt ml-0")
+                h4=title
+                p=text
+
+mixin card(img,title,src,text,button)
+    div(class="card")
+        div(class="card-header p-0 position-relative")
+            a(href="single.html")
+                img(src="images/"+img class="card-img-bottom")
+                span(class="post-icon")=title
+        div(class="card-body")
+            h5(class="blog-title card-title font-weight-bold")
+                a(href="single.html")=src
+            p=text
+            a(href="single.html" class="blog_link")=button
+
+mixin banner()
+    div(class="inner-banner-w3ls d-flex flex-column justify-content-center align-items-center")
+
+mixin rutaActual(title)
+    nav(arial-label="breadcrumb")
+        ol(class="breadcrumb d-flex justify-content-center")
+            li(class="breadcrumb-item")
+                a(href="/" class="home") Inicio
+                li(class="breadcrumb-item active" aria-current="page")=title 
+
+mixin input(type, placeholder, name, id, title)
+    div(class="form-group")
+        label(for=id class="col-form-label")=title
+        input(type=type class="form-control" placeholder=placeholder name=name id=id required="" )

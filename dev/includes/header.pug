@@ -1,0 +1,27 @@
+header(id="home")
+    div(class="container") 
+        div(class="header d-lg-flex justify-content-between align-items-center py-sm-3 py-2 px-sm-2 px-1")
+            div(id="logo")  
+                h2: a(href="/") Intense
+            div(class="nav_w3ls ml-lg-5")
+                nav
+                    label(for="drop" class="toggle") Menu
+                    input(type="checkbox" id="drop")
+                    ul(class="menu")
+                        each menu_item in menu
+                            li
+                                if menu_item.child.length > 0
+                                    label(for="drop-2" class="toggle toggle-2") Desplegable
+                                        span(class="fa fa-angle-down" aria-hidden="true")
+                                a(href=`${menu_item.url.toLowerCase().split(' ').join('-')}`)=menu_item.title
+                                if menu_item.child.length > 0
+                                    ul
+                                        each subItem in menu_item.child 
+                                                li: a(href=`${subItem.url.toLowerCase().split(' ').join('-')}`)=subItem.title
+
+                        li(class="nav-right-sty mt-lg-0 mt-sm-4 mt-3")
+                                a(href="iniciar-sesion.html" class="reqe-button text-uppercase") Iniciar Sesión
+                                a(href="registro.html" class="reqe-button text-uppercase") Registrarse
+
+
+                                

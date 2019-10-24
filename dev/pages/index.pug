@@ -1,0 +1,215 @@
+extends ../template/template
+append config
+    - var currentpage = 'Inicio'
+block banner
+    section(class="banner")
+        div(class="container")
+            div(class="banner_text_wthree_pvt")
+                h3(class="home-banner-w3") Lorem, ipsum dolor sit amet consectetur.
+                p(class="bnr-txt") Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod quisquam quas vel vero.
+                div(class="row")
+                    div(class="col-lg-4")
+                        fom(action="#" method="POST")
+                            div(class="input-group")
+                                select(class="custom-select" id="inputGroupSelect04" arial-label="Ejemplo de como seleccionar con botón de plugin")
+                                    option(selected) Elegir...
+                                    option(value="1") Lorem, ipsum.
+                                    option(value="2") Lorem, ipsum dolor.
+                                    option(value="3") Lorem, ipsum.
+                                div(class="input-group-append")
+                                    button(class="btn bg-theme" type="button") Enviar
+        div(class="banner-bottom-w3ls")
+            div(class="container")
+                div(class="row")
+                    +cardBanner('','a2','lorem ipsum thuew.')
+                    +cardBanner('','a1','lorem ipsum thokg.')
+                    +cardBanner('mx-auto mt-sm-0 mt-4','a3','lorem ipsum rejif')
+block acerca_de
+    section(class="single_grid_w3_main align-w3-abt" id="about")
+        div(class="container")
+            div(class="wthree_pvt_title text-center")
+                h4(class="w3pvt-title") Servicios superiores
+                p(class="sub-title") Subheadings stand out because they are like mini titles. They make your post stand out and make it more readable.
+            div(class="row")
+                div(class="col-lg-4")
+                    +service(
+                        'fa fa-ravelry',
+                        'Takimata sanctus',
+                        'Lo sea takimata sanctus est Lorem ipsum dolor sit amet.'
+                    )
+                div(class="col-lg-4 my-lg-0 my-4")
+                    +service(
+                        'fa fa-pencil',
+                        'Takimata sanctus',
+                        'Lo sea ipsum lorem valdur sit amet sanctus'
+                    )
+                div(class="col-lg-4")
+                    +service(
+                        'fa fa-laptop',
+                        'Takimata sanctun',
+                        'Lo sea takimata sanctus est Lorem ipsum dolor sit amet.'
+                    )
+            div(class="d-flex justify-content-center")
+                a(href="about.html" class="btn w3ls-btn") Ver más
+block provide
+    section(class="bg-services position-relative align-w3" id="services")
+        div(class="container-fluid")
+            div(class="row")
+                div(class="col-lg-6")
+                    div(class="services-bg-color")
+                        div(class="wthree_pvt_title mb-3")
+                            h4(class="w3pvt-title") What we provide
+                            span(class="sub-title") add your caption here
+                        div(class="row")
+                            div(class="col-md-6 service-title my-4")
+                                h4(class="home-title text-theme") Lorem ipsum 
+                                p(class="sec-4") Lorem ipsum dolor sit amet, consectetur adipisicing.
+                            div(class="col-md-6 service-title my-md-4")
+                                h4(class="home-title text-theme") sub heading
+                                p(class="sec-4") Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            div(class="col-md-6 service-title mt-4")
+                                h4(class="home-title text-theme") sub heading
+                                p(class="sec-4") Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem?
+                            div(class="col-md-6 service-title mt-4")
+                                h4(Class="home-title text-theme") Sub heading
+                                p(class="sec-4") Itaque earum rerum hic tenetur a sapiente delectusum hic tenetur as.
+                            div(class="d-flex justity-content-start")
+                                a(her="about.html" class="btn w3ls-btn") Ver más
+                        div(class="offset-lg-2")
+block portfolio
+    div(class="wthree_pvtits-services align-w3" id="portfolio")
+        div(class="container")
+            div(class="wthree_pvt_title text-center")
+                h4(class="w3pvt-title") Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos
+                p(class="sub-title")  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quis sapiente impedit rem?
+            ul(class="demo row")
+                +portfolio(
+                    '#gal1',
+                    'g1.jpg',
+                    'Some description',
+                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, qui. Quis quibusdam atque laborum nam alias.'
+                )
+                +portfolio(
+                    '#gal2',
+                    'g2.jpg',
+                    'Some description',
+                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, qui. Quis quibusdam atque laborum nam alias.'
+                )
+                +portfolio(
+                    '#gal3',
+                    'g3.jpg',
+                    'Some description',
+                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, qui. Quis quibusdam ataque laborum nam alias.'
+                )
+                +portfolio(
+                    '#gal4',
+                    'g4.jpg',
+                    'Some description',
+                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, qui. Quis quibusdam atque laborum nam alias.'
+                )
+                +portfolio(
+                    '#gal5',
+                    'g5.jpg','Some description',
+                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, qui. Quis quibusdam atque laborum nam alias.'
+                )
+                +portfolio(
+                    '#gal6',
+                    'g6.jpg',
+                    'Some description',
+                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, qui. Quis quibusdam atque laborum nam alias.'
+                )
+            div(class="d-flex justify-content-center")
+                a(href="portfolio.html" class="btn w3ls-btn") Ver más
+            +popup(
+                'gal1',
+                'g1.jpg',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, qui. Quis quibusdam atque laborum nam alias.'
+            )
+            +popup(
+                'gal2',
+                'g2.jpg',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, qui. Quis quibusdam atque laborum nam alias.'
+            )
+            +popup(
+                'gal3',
+                'g3.jpg',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, qui. Quis quibusdam atque laborum nam alias.'
+            )
+            +popup(
+                'gal4',
+                'g4.jpg',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, qui. Quis quibusdam atque laborum nam alias.'
+            )
+            +popup(
+                'gal5',
+                'g5.jpg',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, qui. Quis quibusdam atque laborum nam alias.'
+            )
+            +popup(
+                'gal6',
+                'g6.jpg',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, qui. Quis quibusdam atque laborum nam alias.'
+            )
+block slide
+    section(class="wthree-slie-btm py-lg-5")
+        div(class="container-fluid")
+            div(class="row")
+                div(class="col-lg-6")
+                    div(class="slide-banner pl-0")
+                div(class="col-lg-6 mt-lg-0 mt-4")
+                    div(class="container")
+                        div(class="wthree_pvt_title")
+                        h4(class="w3pvt-title") soluciones creativas
+                        span(class="sub-title") agrega tu cosa aquí
+                        div(class="row flex-column")
+                            div(class="abt-grid")
+                                +creativeIcon(
+                                    'fa fa-ravelry',
+                                    'sanctus takimata',
+                                    'lorem est dolor sit amet lo sea sanctus.'
+                                )
+                            div(class="abt-grid mt-4 pt-lg-2")
+                                +creativeIcon(
+                                    'fa fa-ravelry',
+                                    'sanctus takimata',
+                                    'lorem est dolor sit amet lo sea sanctus.'
+                                )
+                        div(class="d-flex justify-content-start")
+                            a(href="about.html" class="btn w3ls-btn") Ver más
+block posts
+    section(class="blog_w3ls align-w3" id="posts")
+        div(class="container")
+            div(Class="wthree_pvt_title tex t-center")
+                h4(class="w3pvt-title") Últimas publicaciones
+                p(class="sub-title") Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque aspernatur exercitationem nam aliquam!
+            div(class="row space-sec")
+                div(class="col-lg-4 col-md-6 mt-sm-0 mt-4")
+                    +card(
+                        'g1.jpg',
+                        'blog post',
+                        'cras ultrices liguila se',
+                        'At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sitAt vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit',
+                        'Leer más'
+                    )
+                div(class="col-lg-4 col-md-6 mt-md-0  mt-4")
+                    +card(
+                        'g2.jpg',
+                        'blog post',
+                        'cras ultrices liguila se',
+                        'At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sitAt vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit',
+                        'Leer más'
+                    )
+                div(class="col-lg-4 col-md-6 mt-lg-0 mt-4 mx-auto blog-end")
+                    +card(
+                        'g3.jpg',
+                        'blog post',
+                        'cras ultrices liguila se',
+                        'At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sitAt vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit',
+                        'Leer más'
+                    )
+
+                    
+                    
+
+
+                                    

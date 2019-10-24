@@ -1,0 +1,25 @@
+block config 
+    include ../config/config
+include ../config/mixin
+doctype html
+html(lang="es")
+    head
+        title=`${currentpage}-${website}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(charset="utf-8")
+        meta(name="keywords" content="Diseño con boostrap, Responwive Web Design")
+    
+    each link in css
+        link(rel="stylesheet" href=`${link}`)
+    
+body
+    block header
+        include ../includes/header
+    block banner
+    block acerca_de
+    block provide
+    block portfolio
+    block slide
+    block posts
+    block footer
+        include ../includes/footer
