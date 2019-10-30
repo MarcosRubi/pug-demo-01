@@ -1,0 +1,153 @@
+extends ../template/template
+append config
+    - var currentpage= 'Acerca De'
+block banner
+    +banner()
+    +rutaActual('Acerca De')
+    section(class="single_grid_w3_main align-w3")
+        div(class="container")
+            div(class="row pt-lg-4")
+                div(class="col-lg-5")
+                    div(class="wthree_pvt_title  mb-3")
+                        h4(class="w3pvt-title") Acerca de nosotros
+                        span(class="sub-title") Agrega tu wea aquí
+                    div(class="single_grid_text pt-lg-3")
+                        p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum accusantium placeat officiis expedita enim!
+                        p(class="my-2") Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo magni quia ipsam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae porro perferendis ducimus maiores nulla quo!
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos eum autem minima totam asperiores ex nam ullam?
+                        a(class="btn bg-theme mt-4 wthree-link-bnr" href="acerca-de.html") Ver más
+                div(class="col-lg-7 mt-lg-0 mt-4")
+                    div(class="slide-img")
+    div(class="single_grid_w3_main align-w3")
+        div(class="container")
+            div(class="wthree_pvt_title text-center")
+                h4(class="w3pvt-title") Servicios superiores
+                p(class="sub-title") Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi soluta dicta fuga alias necessitatibus deleniti.
+            div(class="row")
+                div(class="col-lg-4")
+                    +service(
+                        'fa fa-ravelry',
+                        'lorem ipsum dolor',
+                        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi soluta dicta'
+                    )
+                div(class="col-lg-4 my-lg-0 my-4")
+                    +service(
+                        'fa fa-pencil',
+                        'lorem ipsum dolor',
+                        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi soluta dicta'
+                    )
+                div(class="col-lg-4")
+                    +service(
+                        'fa fa-laptop',
+                        'lorem ipsum dolor',
+                        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi soluta dicta'
+                    )
+            div(class="row mt-lg-5 pt-4")
+                div(class="col-lg-4")
+                    div(class="abt-grid")
+                        div(class="row")
+                            div(class="col-3")
+                                div(class="abt-icon")
+                                    span(class="fa fa-clock-o")
+                            div(class="col-9")
+                                div(clasS="abt-txt")
+                                    h4 Lorem, ipsum dolor.
+                                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam laboriosam beatae animi!
+                div(class="col-lg-4 my-lg-0 my-4")
+                    +service(
+                       'fa fa-pencil',
+                        'lorem ipsum dolor',
+                        'sasayego kamuset ameno kakashi judo sensei rejso'
+                    )
+                div(class="col-lg-4")
+                    +service(
+                       'fa fa-ravelry',
+                        'lorem ipsum dolor',
+                        'sasayego kamuset ameno kakashi judo sensei rejso'
+                    )
+    section(class="bg-services position-relative align-w3" id="services")
+        div(class="container-fluid")
+            div(class="row")
+                div(class="col-lg-6")
+                    div(class="services-bg-color")
+                        div(class="whtree_pvt_title mb-3")
+                            h4(class="w3pvt-title") What we provide
+                            span(class="sec-4") Lorem ipsum dolor sit amet
+                        div(class="row")
+                            div(class="col-md-6 service-title my-4")
+                                h4(class="home-title text-theme") Sub heading
+                                p(class="sec-4") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia eveniet facilis sapiente.
+                            div(Class="col-md-6 service-title my-md-4")
+                                h4(class="home-title text-theme") Sub heading
+                                p(class="sec-4") Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere molestiae alias quae.
+                            div(Class="col-md-6 service-title mt-4")
+                                h4(class="home-title text-theme") Sub heading
+                                p(class="sec-4") Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere molestiae alias quae.
+                            div(Class="col-md-6 service-title mt-4")
+                                h4(class="home-title text-theme") Sub heading
+                                p(class="sec-4") Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere molestiae alias quae.
+                        div(class="d-flex justify-content-start")
+                            a(href="acerca-de.html" class="btn w3ls-btn") Ver más
+                div(class="offset-lg-2")
+    section(class="w3layouts_hubits-services align-w3" id="team")
+        div(class="container")
+            div(class="wthree_pvt_title text-center")
+                h4(class="w3pvt-title") Nuestros expertos
+                p(clasS="sub-title") Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere ab dolores optio itaque amet recusandae voluptate!
+            div(class="row py-4 mt-lg-5  team-grid")
+                div(clas="col-md-4 col-sm-6")
+                    //- image, title, post, fb, twitter
+                    +team(
+                        't1',
+                        'Daniel',
+                        'Desarrolador web',
+                        '#',
+                        '#'
+                    )
+                div(class="col-md-4 col-sm-6")
+                    +team(
+                        't2',
+                        'Kristina',
+                        'Diseñador UX/UI',
+                        '#',
+                        '#'
+                    )
+                div(class="col-md-4 col-sm-6 mx-auto")
+                    +team(
+                        't3',
+                        'Michael',
+                        'Analista de sistema',
+                        '#',
+                        '#'
+                    )
+    
+    section(class="wthree-slide-btm py-lg-5")
+        div(Class="container-fluid")
+            div(class="row")
+                div(class="col-lg-6")
+                    div(clasS="slide-banner pl-0")
+                div(clasS="col-lg-6 mt-lg-0 mt-4")
+                    div(Class="container")
+                        div(class="wthree_pvt_title")
+                            h4(Class="w3pvt-title") Soluciones creativas
+                            span(clasS="sub-title") Agregar tu solución aquí
+                        div(class="row flex-column")
+                            div(class="abt-grid")
+                                div(class="row")
+                                    div(class="col-3")
+                                        div(class="abt-icon")
+                                            span(class="fa fa-ravelry")
+                                    div(class="col-9")
+                                        h4 Lorem, ipsum dolor.
+                                        p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, itaque! Nesciunt iure sint laudantium.
+                            div(class="abt-grid mt-4 pt-lg-2")
+                                div(class="row")
+                                    div(class="col-3")
+                                        div(class="abt-icon")
+                                            span(class="fa fa-laptop")
+                                    div(class="col-9")
+                                        div(class="abt-txt ml-0")
+                                            h4 Lorem, ipsum dolor.
+                                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, sequi corrupti? Magnam, consequatur corporis?
+                        div(class="d-flex justify-content-start")
+                            a(href="portafolio.html" class="btn w3ls-btn") Ver más

@@ -1,0 +1,55 @@
+extends ../template/template
+append config
+    -var currentpage = 'Contacto'
+block banner
+    +banner()
+    +rutaActual('contacto')
+    section(class="contact-wthree align-w3" id="contact")
+        div(class="container")
+            div(class="wthree_pvt_title text-center")
+                h4(class="w3pvt-title") Contáctenos
+                p(class="sub-title") Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quam. Molestias id totam earum vero?
+            div(class="mx-auto text-center")
+                iframe(class="mt-lg-4 contact-form-wthreelayouts" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2798902705!2d-74.25986790365911!3d40.697670067823786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1536917325197" allowfullscreen)
+            div(class="row mt-4")
+                div(Class="col-lg-7")
+                    h5(class="contact-form") Enviar un email
+                    div(class="contact-form-wthreelayouts")
+                        form(action="#" method="post" class="register-wthree")
+                            +input(
+                                'text',
+                                'Daniel',
+                                'txtUsusario',
+                                '',
+                                'Su nombre'
+                            )
+                            +input(
+                                'text',
+                                '1234 56789',
+                                'txtTelefono',
+                                '',
+                                'Número de teléfono'
+                            )
+                            div(class="form-group")
+                                label Su mensaje
+                                textarea(class="form-control" placeholder="Ingrese su mensaje")
+                            div(class="form-group mb-0")
+                                button(type="submit" class="btn btn-w3layouts btn-block btn-primary text-whw-100 font-weight-bold text-uppercase") Enviar
+                div(class="col-lg-5 text-center")
+                    h5(class="cont-form") información de contacto
+                    div(class="row flex-column")
+                        div(class="contact-w3")
+                            span(class="fa fa-envelope-open mb-3")
+                            div(class="d-flex flex-column")
+                                a(href="mailto:ejemplo1@gmail.com" class="d-block") info@ejemplo.com
+                                a(href="mailto:ejemplo2@gmail.com" class="d-block") info1@ejemplo.com
+                                a(href="mailto:ejemplo3@gmail.com" class="d-block") info2@ejemplo.com
+                        div(class="contact-w3 my-4")
+                            span(class="fa fa-phone mb-3")
+                            div(class="d-flex flex-column")
+                                p +503 7178-0173
+                                p(class="my-1") +503 7584-1254
+                                p +503 4587-1258
+                        div(class="contact-w3")
+                            span(class="fa fa-home mb-3")
+                            address 474 Main Street <br> 55 Shirley Ave. <br> Broome St, New york.
