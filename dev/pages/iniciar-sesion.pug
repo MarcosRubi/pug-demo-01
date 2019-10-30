@@ -1,0 +1,35 @@
+extends ../template/template
+append config
+    - var currentpage= 'Iniciar sesion'
+block banner
+    +banner()
+    +rutaActual('Iniciar sesion')
+    
+    div(class="modal-body align-w3")
+        form(action="#" method="post" class="p-sm-3")
+            +input(
+                'text',
+                'Ingrese usuario',
+                'txtUsuario',
+                'recipient-usuario',
+                'Usuario'
+            )
+            +input(
+                'password',
+                '***********',
+                'txtcontraseña',
+                'recipient-contraseña',
+                'Contraseña'
+            )
+            div(class="right-w3l")
+                input(type="submit" class="form-control bg-theme" value="Login")
+            div(class="row sub-w3l my-3")
+                div(class="col-sm-6 sub-w3layouts_hub")
+                    input(type="checkbox" id="brand1" value="")
+                    label(for="brand1" class="text-secondary")
+                        span Recuerdame
+                div(class="col-sm-6 forgot-w3l text-sm-right")
+                    a(href="#" class="text-secondary") Olvidaste la contraseña?
+            p(class="text-center dont-do text-secondary") No tienes una cuenta?
+                a(href="registro.html" class="text-theme-2 font-weight-bold") &nbsp; Registrarse! 
+    

@@ -1,0 +1,42 @@
+extends ../template/template
+append config   
+    - var currentpage= 'Registrarse'
+block banner
+    +banner()
+    +rutaActual('Registrarse')
+    div(class="modal-body align-w3")
+        form(action="#" method="post" clasS="p-sm-3")
+            +input(
+                'text',
+                'Ingresar Nombre de usuario',
+                'txtUsusario',
+                'recipient-user',
+                'Usuario'
+            )
+            +input(
+                'email',
+                'Ingresar email',
+                'txtEmail',
+                'recipient-email',
+                'E-mail'
+            )
+            +input(
+                'password',
+                'Ingresar contraseña',
+                'txtContrasena',
+                'recipient-contraseña',
+                'Contraseña'
+            )
+            +input(
+                'password',
+                'Confirme contraseña',
+                'txtContrasenaConfirm',
+                'recipient-contraseñaConfirm',
+                'Confirmar Contraseña'
+            )
+            div(class="sub-w3l")
+                div(class="sub-w3layouts_hub")
+                    input(type="checkbox" id="brand2" value="")
+                    label(for="brand2" class="mb-3 text-secondary") Acepto los terminos y condiciones
+                div(class="right-w3l")
+                    input(type="submit" class="form-control bg-theme" value="Registrarse!")

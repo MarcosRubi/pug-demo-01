@@ -62,7 +62,27 @@ mixin rutaActual(title)
                 a(href="/" class="home") Inicio
                 li(class="breadcrumb-item active" aria-current="page")=title 
 
+mixin service(icon, title, content)
+    div(class="abt-grid")
+                        div(class="row")
+                            div(class="col-3")
+                                div(class="abt-icon")
+                                    span(class=icon)
+                            div(class="col-9")
+                                div(class="abt-txt")
+                                    h4=title
+                                    p=content
 mixin input(type, placeholder, name, id, title)
     div(class="form-group")
         label(for=id class="col-form-label")=title
-        input(type=type class="form-control" placeholder=placeholder name=name id=id required="" )
+        input(type=type  placeholder=placeholder name=name id=id required="" class="form-control")
+
+mixin team(image, title, post, fb, twitter)
+    div(class="box13")
+        img(src="images/" + image + ".jpg" class="img-fluid")
+        div(clasS="box-content")
+            h3(class="title")=title
+            span(class="post")=post
+            ul(class="social")
+                li: a(href=fb): i(class="fa fa-facebook")
+                li: a(href=twitter): i(class="fa fa-twitter")
